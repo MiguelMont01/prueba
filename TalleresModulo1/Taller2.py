@@ -1,6 +1,6 @@
 #TALLER 2 - EJERCICIOS DE ALGORITMIA ESTRUCTURA CONDICIONAL
 
-
+ #///////////////////////////////////////////////////////////////////////////////////
                         #1. Leer dos (2) números y los imprima en forma ascendente.
 
 
@@ -21,7 +21,7 @@
 # else:
 #     print("ingreso un dato invalido, por favor ingresa solamente numeros")
 
-
+ #///////////////////////////////////////////////////////////////////////////////////
 
                         # 2. (Sentencia match) Diseñar un algoritmo que lea por teclado un número
                         # comprendido entre 1 y 10. Se desea visualizarsi el número es par o impar. En primer
@@ -31,26 +31,69 @@
                         # un mensaje de “par”.
 
 
+# numero = input("Ingrese un número entre 1 y 10: ")
+# numero = int(numero)
+# if type(numero) == int:
+#     if numero < 1 or numero > 10:
+#         print("El número ingresado no está dentro del rango válido.")
+#     else:
+#         resultado = match numero:
+#             case 1, 3, 5, 7, 9:
+#                 "impar"
+#             case 2, 4, 6, 8, 10:
+#                 "par"
+#         print(f"El número ingresado es {resultado}.")
+# else:
+#     print("El valor ingresado no es un número entero.")
 
+ #///////////////////////////////////////////////////////////////////////////////////
 
-# usernum=input("ingrese un numero comprendido del 1 al 10 para verificar si es par o impar")
+# numero = input("Ingrese un número entre 1 y 10: ")
+# numero = int(numero)
+# if numero < 1 or numero > 10:
+#         print("El número ingresado no está dentro del rango válido.")
+# elif numero in (1, 3, 5, 7, 9):
+#         print("El número ingresado es impar.")
+# else:
+#         print("El número ingresado es par.")
 
-
-# rest2 = usernum % 10
-
-# if rest2 = 0:
-
+ #///////////////////////////////////////////////////////////////////////////////////
                         # 3. (Sentencia match) Diseñar un algoritmo que lea un número entero entre 1 y 10, y
                         # nos muestre por pantalla el número ingresado en letra (1 = uno). Si el número leído
                         # no está comprendido entre 1 y 10 mostrar un mensaje de error  
 
+# numero = input("Ingrese un número entre 1 y 10: ")
+# numero = int(numero)
 
+# if 1 <= numero <= 10:
+#     equivalencias = {
+#         1: "uno",
+#         2: "dos",
+#         3: "tres",
+#         4: "cuatro",
+#         5: "cinco",
+#         6: "seis",
+#         7: "siete",
+#         8: "ocho",
+#         9: "nueve",
+#         10: "diez"
+#     }
+    
+#     resultado = match numero:
+#         case equivalencias.keys():
+#             equivalencias[numero]
+    
+#     print(f"El número ingresado es {resultado}.")
+# else:
+#     print("El número ingresado no está dentro del rango válido.")
+#///////////////////////////////////////////////////////////////////////////////////
 
                         # 4. Determinar la cantidad total a pagar por una llamada telefónica, teniendo en cuenta
                         # lo siguiente:
                         # • toda llamada que dure tres minutos o menos tiene un coste de 200 pesos.
                         # • cada minuto adicional a partir de los tres primeros es un paso de contador y
                         # cuesta 100 pesos
+
 # print("vamos a calcular el valor de su llamada. ")
 # print("recuerde que los segundos, pasado el minuto anterior, cuenta como un minuto. ")
 # min=input("ingrese el numero de minutos que consumio en su llamada. ")
@@ -188,7 +231,6 @@
 #     print("El presupuesto para el area de Traumatologia al cual se le invierte el",porTra,"% correspondiente al presupuesto anual es de un valor de: $",preTra)
 
 # elif porTotal < 100:
-
 #     print("El porcentaje es menor al 100% recuerda especificar que hacer con el restante.")
     
 #     prePsi = preAnual * (porPsi/100)
@@ -209,5 +251,18 @@
                     # conociendo la distancia a recorrer, sabiendo que si el número de días de estancia es
                     # superior o igual a 7 y la distancia superior a 800 km el billete tiene una reducción
                     # del30%. El precio por km es de $2,5 dólares
+
+distancia = float(input("Ingrese la distancia a recorrer en kilómetros: "))
+duracion = int(input("Ingrese el número de días de estancia: "))
+
+precio_por_km = 2.5
+precio_total = distancia * precio_por_km
+
+if duracion >= 7 and distancia > 800:
+    precio_total *= 0.7
+
+print(f"El precio del tiquete de ida y vuelta es de ${precio_total:.2f}")
+
+
 
 
